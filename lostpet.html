@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Lost Pet!</title>
+<style type="text/css">
+img.pic {
+	display: block;
+	margin: 10px auto;}
+h1, h3 {
+	text-align: center;}
+	</style>
+</head>
+<body>
+<h1>Think you've seen my turtle?</h1>
+
+<img src="http://www.turtlesale.com/images/newpages/Pearl_River_Map_Turtle_For_Sale_Picture_3.jpg" class="pic" alt="My Awesome Turtle">
+<h3>Please fill out the form to let me know where in the world she is!
+</h3>
+<form action="/lostpet.html" method="post">
+<p>
+Your name:
+<input type="text" name="name" size="20" maxlength="40" /></p>
+
+<p>Where did you see her? 
+<input type="text" name="location" size="40" maxlength="100" /></p>
+
+<p>When?
+<select name="whenseen">
+<option value="today">Today</option>
+<option value="yesterday">Yesterday</option>
+<option value="awhile">A While Back</option>
+<option value="unsure">Not sure, I might have been drinking</option>
+</select>
+</p>
+
+<p>Time of Day:
+<input type="radio" name="timeofday" value="morning" /> Morning
+<input type="radio" name="timeofday" value="afternoon" /> Afternoon
+<input type="radio" name="timeofday" value="evening" /> Evening
+<input type="radio" name="timeofday" value="unsure" /> Beats me!
+</p>
+
+<p>Your email address:
+<input type="text" name="email" size="20" maxlength="100"></p>
+
+<p>Any words of wisdom?</p>
+<textarea name="comments" cols="40" rows="5"></textarea>
+
+<p><input type="submit" name="submit" value="Make my day!" /></p>
+</form>
+</body>
+</html>
