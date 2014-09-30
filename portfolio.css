@@ -6,6 +6,8 @@ h1 {
 	color: white;
 	margin-right: 10%;
 	margin-left: 10%;
+	padding: 15px;
+	margin: 35px;
 }
 
 h2 {
@@ -25,6 +27,9 @@ div.info {
     background-color: lightgray;
 
    
+}
+p.centered {
+	text-align: center;
 }
 
 a:link {
