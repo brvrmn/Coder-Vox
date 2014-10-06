@@ -65,6 +65,26 @@ if (isprime) console.log ("It's prime.") ;
 	else console.log(input + " is divisible by " + multiple);
 
 /* 5. Using your prime script, find all the primes between 2 and 1000. Architect your script 
-that you could find primes between 2 to 10,000, 100,000, 1 m  ..etc and so on with minimal changes.
+that you could find primes between 2 to 10,000, 100,000, 1 m  ..etc and so on with minimal changes. */
 
+var input=1000;
 
+var isPrime = function(num){
+	var isprime, j=(num/2 - 1);
+	// check if the number is prime
+	for (var i=2; i<j; i++) {
+
+		if (num % i === 0) {
+			isprime=false;
+			break;
+		}
+		else isprime=true;
+
+	}	
+if (isprime) console.log(num);
+
+}
+
+for (var q=2; q <= input; q++) {
+isPrime(q);
+}
