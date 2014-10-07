@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>TV</title>
+</head>
+<body>
+	<h1>TV</h1>
+
+	<label for="make">Brand</label>
+	<input type="text" id="make"/>
+	<br>
+	<label for="model">Model</label>
+	<input type="text" id="model" />
+	<br>
+	<label for="screenSize">Screen Size</label>
+	<input type="text" id="screenSize"/>
+	<br>
+	<label for="resolution">Resolution</label>
+	<input type="text" id="resolution" />
+	<br>
+	<label for="volumeLevel">Volume Level</label>
+	<select name="volumeLevel" id="volumeLevel">
+	</select>
+<br>
+	<script>
+		var volumeLevel = document.getElementById('volumeLevel');
+		var option = null;
+		for(var i = 1; i <= 100; i++)
+		{
+			option = document.createElement('option');
+			option.value = i;
+			option.innerHTML = i;
+			volumeLevel.appendChild(option);
+
+		}
+		var make = document.getElementById('make');
+	
+	</script>
+	<button onclick="addIt()">Add Your TV</button>
+	<script src="js/tv.js"></script>
+</body>
+</html>
