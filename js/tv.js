@@ -28,10 +28,9 @@ var TVarray = [samsung];
 		var newTV = new TV(document.getElementById("make").value,document.getElementById("model").value,
 					document.getElementById("screenSize").value, document.getElementById("resolution").value, 
 					document.getElementById("volumeLevel").value);
-// console.log(newTV);
-// console.log(document.getElementById("make").value);
+
+
 	TVarray[TVarray.length] = newTV;
-	console.log(TVarray);
 
 
 	}
