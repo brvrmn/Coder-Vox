@@ -1,0 +1,14 @@
+<DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var myprincipal = 100;
+	var myrate = 0.1;
+	var mytime = 2;
+	console.log (myprincipal * (1 + myrate * mytime));
+	</script>
+
+</body>
+</html>

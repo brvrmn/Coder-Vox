@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<title>List prime numbers</title>
+</head>
+<body>
+<h1>List prime numbers up to your number</h1>
+<p>Runs when you click out of the box</p>
+	<p><label for="number">Enter the number to test: </label>
+	<input type="text" id="number" name="number"/>
+	</p>
+	<textarea name="output" id="output" cols="40" rows="80"></textarea>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+	$(document).ready(function(){
+
+$("#number").on("blur", function(){
+$('#output').empty();
+$('#output').append(2 + "\n");
+	var input = $("#number").val();
+
+	var isPrime = function(num){
+		var isprime;
+		// check if the number is prime
+		for (var i=2; i<num; i++) {
+
+		if (num % i === 0) {
+			isprime=false;
+			break;
+		}
+		else isprime=true;
+
+	}	
+if (isprime) $('#output').append(num + "\n"); 
+
+}
+
+for (var q=1; q <= input; q++) {
+isPrime(q);
+}
+	});
+});
+
+	</script>
+
+</body>
+</html>

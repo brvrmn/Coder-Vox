@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<head>
+</head>
+<body>
+	<h2>Given:</h2>
+<p>An array with numbers 1 through 100 in random order.
+One of the numbers is missing.</p>
+
+<h2>Task:</h2>
+<p>Write an algorithm to find the missing number </p>
+<textarea name="output" id="output" cols="80" rows="12"></textarea>
+<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+
+	var numbers = [];
+	for(var i = 1; i <= 100; i++)
+		numbers[i-1] = i;
+
+	function shuffle(array) {
+  	var currentIndex = array.length, temporaryValue, randomIndex ;
+	  // While there remain elements to shuffle...
+	  while (0 !== currentIndex) {
+
+	    // Pick a remaining element...
+	    randomIndex = Math.floor(Math.random() * currentIndex);
+	    currentIndex -= 1;
+
+	    // And swap it with the current element.
+	    temporaryValue = array[currentIndex];
+	    array[currentIndex] = array[randomIndex];
+	    array[randomIndex] = temporaryValue;
+	  }
+
+	  return array;
+	}
+
+	numbers = shuffle(numbers);
+	numbers.pop();
+
+$('#output').empty();
+$('#output').append("Randomized: " + numbers + '\n \n');
+	var newArray = numbers;
+	var sorted = newArray.sort(function(a, b){return a-b});
+$('#output').append("Sorted: " + sorted + "\n \n");
+	for (var i=1; i < sorted.length; i++) {
+		if ((sorted[i] - sorted [i-1]) != 1) {
+			$('#output').append((sorted[i] - 1) + " was missing.");
+			break;
+		}
+	}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		input#username.invalid {
+			background-color: red;
+			color: white;
+			padding: 5px;
+		}
+		input#username.valid
+		{
+			background-color: green;
+			color: white;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<label for="username">Username</label>
+	<input type="text" id="username" name="username"/>
+	<br>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script>
+	$(document).ready(function(){
+
+$("#username").on("blur", function(){
+
+	if ($("#username").val().length < 5)
+		$( "#username" ).removeClass( "valid" ).addClass( "invalid" );
+	else $("#username").removeClass( "invalid" ).addClass( "valid" );
+	});
+});
+
+	</script>
+
+</body>
+</html>

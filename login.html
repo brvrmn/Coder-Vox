@@ -1,0 +1,12 @@
+<html>
+<?php
+session_start();
+if(!($_SESSION["success"])) {
+    echo "Access denied!";
+
+}
+else {
+	echo "Welcome!";
+}
+?>
+</html>

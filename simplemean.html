@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+function TV(make, model, inches, screen, is3d) {
+
+	this.make = make;
+	this.model = model;
+	this.size = inches;
+	this.screentype = screen;
+	this.is3d = is3d;
+	this.turnOn = function(){
+		if (is3d) console.log("It's on."); 
+			else console.log("No way.");
+	}
+	} 
+
+
+
+var myTV = new TV("LG","342",60,"Plasma",false);
+var newTV = new TV("Sony", "SC-345", 55, "LCD", true);
+myTV.turnOn();
+newTV.turnOn();
+</script>
+</body>
+</html>

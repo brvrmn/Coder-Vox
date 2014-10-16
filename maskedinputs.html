@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Testing Masked Inputs Plugin</title>
+</head>
+<body>
+<p><label for="phone">Enter your phone number:</label>
+<input type="text" id="phone" name="phone"/></p>
+<p><label for="ein">Enter your EIN:</label>
+<input type="text" id="ein" name="ein" /></p>
+<p><label for="zip">Enter your ZIP code:</label>
+<input type="text" id="zip" name="zip"></p>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+<script>
+jQuery(function($){
+ //  $("#date").mask("99/99/9999");
+   $("#phone").mask("(999) 999-9999");
+   $("#ein").mask("99-9999999");
+//   $("#ssn").mask("999-99-9999");
+	$("#zip").mask("99999-?9999");
+});
+</script>
+</body>
+</html>

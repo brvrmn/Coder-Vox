@@ -26,6 +26,54 @@
 				   'img/cat8.jpg',
 				   'img/cat9.jpg',
 				];
+// var current = document.getElementById("image");
+
+	function getPrev() {
+
+		var currentImage = document.getElementById("image").src;
+		var newImage = document.getElementById("image");
+		var working = currentImage.split('/');
+		var replaced = working[3]+'/' + working[4];
+		var current;
+
+	for (var i=0; i<images.length; i++) {
+		if (images[i] == replaced) current = i;
+	}
+	// if there's room to grab the previous one, do so
+	if (current > 0) newImage.src = images[(current-1)];
+	else newImage.src = images[(images.length-1)];
+
+
+	}
+	function getNext(){
+
+		var currentImage = document.getElementById("image").src;
+		var newImage = document.getElementById("image");
+		var working = currentImage.split('/');
+		var replaced = working[3]+'/' + working[4];
+		var current;
+
+	for (var i=0; i<images.length; i++) {
+		if (images[i] == replaced) current = i;
+	}
+	// if there's room to grab the next one, do so
+
+if (current < (images.length-1)) newImage.src = images[(current+1)];
+else newImage.src = images[0];
+
+	}
+	function getRandom() {
+
+		var show = getRandomInt();
+		var currentImage = document.getElementById("image");
+		currentImage.src = images[show];
+
+	}
+	function getRandomInt() {
+		min = 0;
+		max=images.length - 1;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 	</script>
 </body>
 </html
