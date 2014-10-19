@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,7 +8,7 @@
 	<meta name="author" content="">
 	<link rel="icon" href="favicon.ico">
 
-	<title>You're at my site</title>
+	<title>Learn some about ME</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -31,7 +30,7 @@
   <body>
 
 	<!-- Fixed navbar -->
-	<div class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+	<div class="navbar navbar-default navbar-fixed-top  navbar-inverse" role="navigation">
 	  <div class="container">
 		<div class="navbar-header">
 		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,41 +39,29 @@
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		  </button>
-		  <a class="navbar-brand" href="#">Marina's Navbar Extravaganza</a>
+		  <a class="navbar-brand warning" href="navbar.html">Marina's Navbar Extravaganza</a>
 		</div>
 		<div class="navbar-collapse collapse">
 		  <ul class="nav navbar-nav navbar-right">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="aboutme.html">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			
-		  </ul>
+	<?php
+	$currPath= $_SERVER["PHP_SELF"];
+//	var_dump($currPath);
+	if ($currPath == "/navbar.php") {
+		echo '<li class="active"><a href="navbar.php">Home</a></li>';
+	}
+	else echo '<li><a href="navbar.php">Home</a></li>';
+	if ($currPath == "/aboutme.php") {
+		echo '<li class="active"><a href="aboutme.php">About</a></li>';
+	}
+		else echo '<li><a href="aboutme.php">About</a></li>';
+	if ($currPath=="/contact.php") {
+		echo '<li class="active"><a href="contact.php">Contact</a></li>';
+	}		
+		else echo '<li><a href="contact.php">Contact</a></li>';
+echo " </ul>";
+	?>
+	
 		  
 		</div><!--/.nav-collapse -->
 	  </div>
 	</div>
-
-	<div class="container">
-
-	  <!-- Main component for a primary marketing message or call to action -->
-	  <div class="jumbotron">
-	  
-	  
-	 <div class="container">
-		<h1 class="text-uppercase text-center">The Nav Bar is Coming for YOU!</h1>
-		
-		</div>
-	  </div>
-
-	</div> <!-- /container -->
-
-
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="../../dist/js/bootstrap.min.js"></script>
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>

@@ -1,14 +1,7 @@
 <?php 
 include_once 'includes/portfolio-header.php';
 ?>
-			<li><a href="navbar.html">Home</a></li>
-			<li class="active"><a href="#">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
 
-		  </ul>
-		  </div><!--/.nav-collapse -->
-		    </div>
-		  </div>
 <div class="container">
 <h1 class="jumbotron">You can find me on: </h1>
 	<row>
